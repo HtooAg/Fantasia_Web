@@ -69,10 +69,17 @@ export function Contact() {
 					transition={{ duration: 0.6 }}
 					className="text-center mb-20"
 				>
-					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
 						Get in{" "}
-						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)]">
+						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)] relative">
 							Touch
+							<motion.span
+								initial={{ scaleX: 0 }}
+								whileInView={{ scaleX: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.8, delay: 0.5 }}
+								className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] rounded-full origin-left"
+							/>
 						</span>
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -90,7 +97,7 @@ export function Contact() {
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
 					>
-						<Card className="card-gold-glow">
+						<Card className="card-gold-glow cursor-pointer">
 							<CardContent className="p-6 lg:p-8">
 								<div className="flex flex-row items-center justify-center mb-10">
 									<Image
@@ -119,7 +126,7 @@ export function Contact() {
 											htmlFor="name"
 											className="block text-sm font-medium mb-2"
 										>
-											Name *
+											Name
 										</label>
 										<Input
 											id="name"
@@ -134,7 +141,7 @@ export function Contact() {
 											htmlFor="email"
 											className="block text-sm font-medium mb-2"
 										>
-											Email *
+											Email
 										</label>
 										<Input
 											id="email"
@@ -193,7 +200,7 @@ export function Contact() {
 											htmlFor="message"
 											className="block text-sm font-medium mb-2"
 										>
-											Message *
+											Message
 										</label>
 										<Textarea
 											id="message"
@@ -286,7 +293,7 @@ export function Contact() {
 							</div>
 						</div>
 
-						<Card className="overflow-hidden card-gold-glow">
+						<Card className="overflow-hidden card-gold-glow cursor-pointer">
 							<CardContent className="p-0">
 								<div className="aspect-video relative">
 									<iframe

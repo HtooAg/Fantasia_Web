@@ -71,13 +71,20 @@ export function Projects() {
 					transition={{ duration: 0.6 }}
 					className="text-center mb-20"
 				>
-					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
 						Featured{" "}
-						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)]">
+						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)] relative">
 							Projects
+							<motion.span
+								initial={{ scaleX: 0 }}
+								whileInView={{ scaleX: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.8, delay: 0.5 }}
+								className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] rounded-full origin-left"
+							/>
 						</span>
 					</h2>
-					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+					<p className="text-lg text-muted-foreground max-w-3xl mx-auto pt-5">
 						Explore our portfolio of exceptional events that
 						showcase our creativity, attention to detail, and
 						commitment to delivering extraordinary experiences that
@@ -95,7 +102,7 @@ export function Projects() {
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
 						>
-							<Card className="overflow-hidden card-gold-glow h-full group">
+							<Card className="overflow-hidden card-gold-glow h-full group cursor-pointer">
 								<CardContent className="p-0">
 									<div className="aspect-video relative overflow-hidden">
 										<Image
@@ -114,7 +121,7 @@ export function Projects() {
 										</div>
 									</div>
 									<div className="p-6">
-										<h3 className="font-bold text-xl mb-2">
+										<h3 className="font-bold text-xl mb-2 	 group-hover:text-[var(--brand)] transition-colors duration-300">
 											{project.title}
 										</h3>
 										<p className="text-muted-foreground mb-4 text-sm leading-relaxed">
@@ -138,13 +145,13 @@ export function Projects() {
 											</div>
 										</div>
 
-										<div className="flex flex-wrap gap-2">
+										<div className="flex flex-wrap gap-2 ">
 											{project.tags.map(
 												(tag, tagIndex) => (
 													<Badge
 														key={tagIndex}
 														variant="outline"
-														className="text-xs"
+														className="text-xs text-[var(--brand)]"
 													>
 														{tag}
 													</Badge>
@@ -166,13 +173,20 @@ export function Projects() {
 					transition={{ duration: 0.6 }}
 					className="text-center mb-12"
 				>
-					<h3 className="text-2xl md:text-3xl font-bold mb-4">
+					<h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
 						What Our Clients{" "}
-						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)]">
+						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)] relative">
 							Say
+							<motion.span
+								initial={{ scaleX: 0 }}
+								whileInView={{ scaleX: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.8, delay: 0.5 }}
+								className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] rounded-full origin-left"
+							/>
 						</span>
 					</h3>
-					<p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+					<p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 pt-3">
 						Hear directly from our satisfied clients about their
 						experiences with Fantasia DXB
 					</p>
@@ -218,7 +232,7 @@ export function Projects() {
 						{filteredVideos.map((video) => (
 							<Card
 								key={video.id}
-								className="overflow-hidden card-gold-glow"
+								className="overflow-hidden card-gold-glow cursor-pointer group"
 							>
 								<CardContent className="p-0">
 									<div className="aspect-video relative bg-gradient-to-br from-[var(--brand)]/10 to-[var(--brand-light)]/5">
@@ -238,7 +252,7 @@ export function Projects() {
 										<div className="flex items-start gap-3 mb-3">
 											<Quote className="w-5 h-5 text-[var(--brand)] flex-shrink-0 mt-1" />
 											<div>
-												<h4 className="font-bold text-lg mb-1">
+												<h4 className="font-bold text-lg mb-1 group-hover:text-[var(--brand)] transition-colors duration-300">
 													{video.title}
 												</h4>
 												<p className="text-sm text-muted-foreground mb-2">
@@ -246,7 +260,7 @@ export function Projects() {
 												</p>
 												<Badge
 													variant="outline"
-													className="text-xs"
+													className="text-xs text-[var(--brand)]"
 												>
 													{video.company}
 												</Badge>

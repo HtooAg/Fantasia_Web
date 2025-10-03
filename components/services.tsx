@@ -99,13 +99,20 @@ export function Services() {
 					transition={{ duration: 0.6 }}
 					className="text-center mb-20"
 				>
-					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
 						Our{" "}
-						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)]">
+						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)] relative">
 							Services
+							<motion.span
+								initial={{ scaleX: 0 }}
+								whileInView={{ scaleX: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.8, delay: 0.5 }}
+								className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] rounded-full origin-left"
+							/>
 						</span>
 					</h2>
-					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+					<p className="text-lg text-muted-foreground pt-5 max-w-3xl mx-auto">
 						Comprehensive luxury event solutions tailored to your
 						unique vision and requirements. From intimate gatherings
 						to grand celebrations, we deliver exceptional
@@ -122,7 +129,7 @@ export function Services() {
 				>
 					{services.map((service, index) => (
 						<motion.div key={index} variants={item}>
-							<Card className="h-full card-gold-glow group">
+							<Card className="h-full card-gold-glow group cursor-pointer">
 								<CardContent className="p-6 flex flex-col items-center text-center">
 									<motion.div
 										className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--brand)]/20 to-[var(--brand-light)]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"

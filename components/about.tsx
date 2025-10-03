@@ -77,10 +77,17 @@ export function About() {
 							delay: 0.2,
 						}}
 					>
-						<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+						<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 relative inline-block">
 							About{" "}
-							<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)]">
+							<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)] relative">
 								Fantasia DXB
+								<motion.span
+									initial={{ scaleX: 0 }}
+									whileInView={{ scaleX: 1 }}
+									viewport={{ once: true }}
+									transition={{ duration: 0.8, delay: 0.5 }}
+									className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] rounded-full origin-left"
+								/>
 							</span>
 						</h2>
 						<p className="text-lg text-muted-foreground mb-6 leading-relaxed">

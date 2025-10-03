@@ -125,10 +125,10 @@ export function Hero() {
 							delay: 0.2,
 							ease: "easeOut",
 						}}
-						className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 text-balance leading-tight"
-						// style={{
-						// 	fontFamily: "'Playfair Display', 'Georgia', serif",
-						// }}
+						className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 text-balance leading-tight font-semibold"
+						style={{
+							fontFamily: "'Playfair Display', 'Georgia', serif",
+						}}
 					>
 						<TypewriterText
 							text="Creative Events That"
@@ -139,7 +139,7 @@ export function Hero() {
 						<br />
 						<TypewriterText
 							text="Inspire"
-							className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent font-bold"
+							className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent font-extrabold"
 							speed={120}
 							pauseDuration={3000}
 							delay={2500}

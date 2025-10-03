@@ -37,10 +37,17 @@ export function Team() {
 					transition={{ duration: 0.6 }}
 					className="text-center mb-20"
 				>
-					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
 						Meet Our{" "}
-						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)]">
+						<span className="bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] bg-clip-text text-transparent dark:text-[var(--brand)] relative">
 							Team
+							<motion.span
+								initial={{ scaleX: 0 }}
+								whileInView={{ scaleX: 1 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.8, delay: 0.5 }}
+								className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] rounded-full origin-left"
+							/>
 						</span>
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -77,7 +84,7 @@ export function Team() {
 							return (
 								<Card
 									key={`${member.name}-${index}`}
-									className="h-full card-gold-glow group relative overflow-hidden"
+									className="h-full card-gold-glow group relative overflow-hidden cursor-pointer"
 								>
 									{/* Background Pattern */}
 									<div className="absolute inset-0 opacity-5">
@@ -129,13 +136,13 @@ export function Team() {
 											</div>
 										</div>
 
-										<div className="text-center space-y-4">
+										<div className="text-left space-y-4">
 											{/* Name and Role */}
-											<div>
-												<h3 className="font-bold text-xl mb-2 group-hover:text-[var(--brand)] transition-colors">
+											<div className="flex items-center flex-col justify-center">
+												<h3 className="font-bold text-xl mb-2 group-hover:text-[var(--brand)] transition-colors text-center">
 													{member.name}
 												</h3>
-												<p className="text-sm font-medium text-[var(--brand)] mb-3 px-3 py-1 bg-[var(--brand)]/10 rounded-full inline-block">
+												<p className="text-sm font-medium text-[var(--brand)] mb-3 px-3 py-1 bg-[var(--brand)]/10 rounded-full inline-block text-center">
 													{member.role}
 												</p>
 											</div>
@@ -144,7 +151,7 @@ export function Team() {
 											<div className="space-y-3 pt-4 border-t border-border/50 ">
 												<a
 													href={`mailto:${member.email}`}
-													className="flex items-center justify-center gap-3 text-sm text-muted-foreground hover:text-[var(--brand)] transition-all duration-300 hover:bg-[var(--brand)]/5 rounded-lg p-2"
+													className="flex items-center justify-start gap-3 text-sm text-muted-foreground hover:text-[var(--brand)] transition-all duration-300 bg-[var(--brand)]/8 rounded-lg p-2"
 													aria-label={`Email ${member.name}`}
 												>
 													<div className="w-8 h-8 rounded-full bg-[var(--brand)]/10 flex items-center justify-center">
@@ -156,7 +163,7 @@ export function Team() {
 												</a>
 												<a
 													href={`tel:${member.phone}`}
-													className="flex items-center justify-center gap-3 text-sm text-muted-foreground hover:text-[var(--brand)] transition-all duration-300 hover:bg-[var(--brand)]/5 rounded-lg p-2"
+													className="flex items-center justify-start gap-3 text-sm text-muted-foreground hover:text-[var(--brand)] transition-all duration-300 bg-[var(--brand)]/8 rounded-lg p-2"
 													aria-label={`Call ${member.name}`}
 												>
 													<div className="w-8 h-8 rounded-full bg-[var(--brand)]/10 flex items-center justify-center">

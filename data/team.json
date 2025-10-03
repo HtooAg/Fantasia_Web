@@ -1,0 +1,87 @@
+[
+	{
+		"name": "Eric Lalta",
+		"role": "CEO",
+		"email": "info@sdsfantasia.com",
+		"phone": "+971528411575",
+		"image": "Eric.png"
+	},
+	{
+		"name": "Eric Kagunda",
+		"role": "Event Coordinator",
+		"email": "mail@fantasiadxb.com",
+		"phone": "+971501648170",
+		"image": "Eric Kagunda.png"
+	},
+	{
+		"name": "Gleason Mathias",
+		"role": "Production Manager",
+		"email": "mail@fantasiadxb.com",
+		"phone": "+971524479753",
+		"image": "Gleason Mathias.png"
+	},
+	{
+		"name": "Mariana Igova",
+		"role": "Event Coordinator",
+		"email": "mail@fantasiadxb.com",
+		"phone": "+971585369690",
+		"image": "Mariana Igova.png"
+	},
+	{
+		"name": "Noor Mohammed",
+		"role": "Creative Graphic Designer",
+		"email": "noor@fantasiadxb.com",
+		"phone": "+971529153707",
+		"image": "Noor Mohammed.png"
+	},
+	{
+		"name": "Helene Yohannes",
+		"role": "Event Planner",
+		"email": "mail@fantasiadxb.com",
+		"phone": "+32466275080",
+		"image": "Helene Yohannes.png"
+	},
+	{
+		"name": "Jobex Monari",
+		"role": "Event Coordinator",
+		"email": "mail@fantasiadxb.com",
+		"phone": "+971552004537",
+		"image": "Jobex Monari.png"
+	},
+	{
+		"name": "Liduina Lovert",
+		"role": "Event Manager",
+		"email": "linalovert@hotmail.com",
+		"phone": "+31 6 47326756",
+		"image": "Liduina Lovert.png"
+	},
+
+	{
+		"name": "Hrithika Dutta",
+		"role": "Assistant Event Planner",
+		"email": "hrithika@fantasiadxb.com",
+		"phone": "+971585366990",
+		"image": "Hrithika Dutta.png"
+	},
+	{
+		"name": "Kristina Vaneva",
+		"role": "Event Manager",
+		"email": "kristinavaneva@hotmail.com",
+		"phone": "+971501034627",
+		"image": "Kristina Vaneva.png"
+	},
+	{
+		"name": "Sayan Dutta",
+		"role": "Creative Director & Assistant Event Manager",
+		"email": "sayandutta@fantasiadxb.com",
+		"phone": "+971585366990",
+		"image": "Sayan Dutta.png"
+	},
+	{
+		"name": "Chandan Mondal",
+		"role": "Creative Video Editor",
+		"email": "chandan94click@gmail.com",
+		"phone": "+971585366990",
+		"image": "Chandan Mondal.png"
+	}
+]

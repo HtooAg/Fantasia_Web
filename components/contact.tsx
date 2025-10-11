@@ -16,44 +16,48 @@ export function Contact() {
 	const { toast } = useToast();
 	const [loading, setLoading] = useState(false);
 
-	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setLoading(true);
 
 		const formData = new FormData(e.currentTarget);
-		const data = {
-			name: formData.get("name"),
-			email: formData.get("email"),
-			phone: formData.get("phone"),
-			service: formData.get("service"),
-			message: formData.get("message"),
-		};
+		const name = formData.get("name") as string;
+		const email = formData.get("email") as string;
+		const phone = formData.get("phone") as string;
+		const message = formData.get("message") as string;
 
-		try {
-			const response = await fetch("/api/contact", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(data),
-			});
+		// Create email content
+		const subject = `New Contact Form Submission from ${name}`;
+		const body = `
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "Not provided"}
 
-			if (response.ok) {
-				toast({
-					title: "Message sent!",
-					description: "We will get back to you soon.",
-				});
-				e.currentTarget.reset();
-			} else {
-				throw new Error("Failed to send message");
-			}
-		} catch (error) {
-			toast({
-				title: "Error",
-				description: "Failed to send message. Please try again.",
-				variant: "destructive",
-			});
-		} finally {
-			setLoading(false);
-		}
+Message:
+${message}
+
+---
+This message was sent from the Fantasia DXB website contact form.
+		`.trim();
+
+		// Create mailto link
+		const mailtoLink = `mailto:info@fantasiadxb.com?subject=${encodeURIComponent(
+			subject
+		)}&body=${encodeURIComponent(body)}`;
+
+		// Open email client
+		window.location.href = mailtoLink;
+
+		// Show success message
+		toast({
+			title: "Email client opened!",
+			description:
+				"Your default email client should open with the message pre-filled.",
+		});
+
+		// Reset form
+		e.currentTarget.reset();
+		setLoading(false);
 	};
 
 	return (

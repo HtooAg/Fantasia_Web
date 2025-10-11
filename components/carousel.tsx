@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -20,8 +20,8 @@ interface CarouselProps {
 export function Carousel({
 	children,
 	itemsPerView = { mobile: 1, tablet: 2, desktop: 3 },
-	autoSlide = true,
-	autoSlideInterval = 5000,
+	autoSlide = false,
+	autoSlideInterval = 10000,
 	className = "",
 }: CarouselProps) {
 	const [currentIndex, setCurrentIndex] = useState(0);

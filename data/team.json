@@ -6,6 +6,14 @@
 		"phone": "+971528411575",
 		"image": "Eric.png"
 	},
+
+	{
+		"name": "John",
+		"role": "Software Developer",
+		"email": "htoow243@gmail.com",
+		"phone": "+971522116024",
+		"image": "JOHN.PNG"
+	},
 	{
 		"name": "Eric Kagunda",
 		"role": "Event Coordinator",

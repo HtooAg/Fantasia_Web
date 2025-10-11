@@ -67,7 +67,7 @@ export function Team() {
 					<Carousel
 						itemsPerView={{ mobile: 1, tablet: 2, desktop: 3 }}
 						autoSlide={true}
-						autoSlideInterval={5000}
+						autoSlideInterval={10000}
 						className="px-8"
 					>
 						{team.map((member, index) => {
@@ -79,7 +79,8 @@ export function Team() {
 								member.role
 									.toLowerCase()
 									.includes("creative") ||
-								member.role.toLowerCase().includes("design");
+								member.role.toLowerCase().includes("design") ||
+								member.role.toLowerCase().includes("developer");
 
 							return (
 								<Card

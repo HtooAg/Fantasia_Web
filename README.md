@@ -8,21 +8,6 @@ A modern, elegant website for Fantasia DXB, a premier event planning and managem
 
 Fantasia DXB specializes in creating extraordinary events with creativity, precision, and unmatched attention to detail. From corporate galas to intimate weddings, we bring visions to life through innovative event planning, creative design, and flawless production management.
 
-## Features
-
--   **Modern Design**: Sleek, professional interface with smooth animations and transitions
--   **Responsive Layout**: Fully optimized for desktop, tablet, and mobile devices
--   **Dark/Light Mode**: Theme toggle for user preference
--   **Interactive Components**:
-    -   Animated hero section with typewriter effect
-    -   Auto-rotating carousel for client testimonials
-    -   Project showcase with filtering
-    -   Team member profiles
-    -   Service cards with hover effects
--   **Contact Form**: Direct email integration to info@fantasiadxb.com
--   **Performance Optimized**: Built with Next.js 15 for optimal loading speeds
--   **SEO Ready**: Structured for search engine optimization
-
 ## Tech Stack
 
 -   **Framework**: Next.js 15.2.4
@@ -35,8 +20,6 @@ Fantasia DXB specializes in creating extraordinary events with creativity, preci
 -   **Analytics**: Vercel Analytics
 -   **TypeScript**: Full type safety
 -   **Deployment**: Vercel
-
-## Getting Started
 
 ### Prerequisites
 
